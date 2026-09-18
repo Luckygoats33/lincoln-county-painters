@@ -177,18 +177,12 @@ ul { list-style: none; padding: 0; margin: 0; }
   text-decoration: none;
   flex-shrink: 0;
 }
-.nav-logo-mark {
-  font-family: 'Newsreader', serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  background: var(--wave);
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.nav-logo-img {
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius);
+  object-fit: contain;
+  flex-shrink: 0;
 }
 .nav-logo-text {
   font-family: 'Newsreader', serif;

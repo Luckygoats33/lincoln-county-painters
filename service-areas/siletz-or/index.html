@@ -61,7 +61,6 @@ img{max-width:100%;display:block}
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(12,34,51,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 2px 24px rgba(0,0,0,.2)}
 .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter);height:var(--nav-h);display:flex;align-items:center;gap:16px}
 .nav-logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;flex-shrink:0}
-.nav-logo-mark{font-family:'Newsreader',serif;font-weight:700;font-size:1.4rem;background:var(--wave);color:#fff;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius)}
 .nav-logo-text{font-family:'Newsreader',serif;font-weight:600;font-size:.82rem;line-height:1.15;white-space:nowrap}
 .nav-links{display:flex;gap:2px;margin-left:auto}
 .nav-links a{color:rgba(255,255,255,.8);font-size:.88rem;font-weight:500;padding:8px 14px;border-radius:var(--radius);transition:all .2s;text-decoration:none}
@@ -160,23 +159,42 @@ img{max-width:100%;display:block}
 <body>
 
 <!-- NAV -->
-<header class="nav" id="nav">
+<header class="nav nav-solid" id="nav">
   <div class="nav-inner">
-    <a href="../../" class="nav-logo"><span class="nav-logo-mark">LCP</span><span class="nav-logo-text">Lincoln County<br>Painters</span></a>
-    <nav class="nav-links"><a href="../../services/">Services</a><a href="../../service-areas/">Areas</a><a href="../../projects/">Projects</a><a href="../../cost/">Cost</a><a href="../../about/">About</a><a href="../../contact/">Contact</a></nav>
+    <a href="../../" class="nav-logo">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3IWaqRwmbrm4lxEDhjQeB0MLn1K/hf_20260918_232017_1da1ca04-29cf-470e-ac04-1ba08803452c.png" alt="Lincoln County Painters" class="nav-logo-img" width="44" height="44">
+      <span class="nav-logo-text">Lincoln County<br>Painters</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../../services/">Services</a>
+      <a href="../../service-areas/">Areas</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../cost/">Cost</a>
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+    </nav>
     <div class="nav-actions">
       <a href="tel:5412707341" class="nav-phone">(541) 270-7341</a>
-      <a href="#estimate" class="btn btn-accent btn-sm">Free Estimate</a>
+      <a href="../../contact/" class="btn btn-accent btn-sm">Free Estimate</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
 <div class="mobile-overlay" id="mobileNav">
-  <button class="mobile-close" id="mobileClose" aria-label="Close menu"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-  <a href="../../services/">Services</a><a href="../../service-areas/">Areas</a><a href="../../projects/">Projects</a><a href="../../cost/">Cost</a><a href="../../about/">About</a><a href="../../contact/">Contact</a>
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="../../services/">Services</a>
+  <a href="../../service-areas/">Areas</a>
+  <a href="../../projects/">Projects</a>
+  <a href="../../cost/">Cost</a>
+  <a href="../../about/">About</a>
+  <a href="../../contact/">Contact</a>
   <a href="tel:5412707341">(541) 270-7341</a>
-  <a href="#estimate" class="btn btn-accent btn-lg" style="margin-top:16px">Get Free Estimate</a>
+  <a href="../../contact/" class="btn btn-accent btn-lg" style="margin-top:16px">Get Free Estimate</a>
 </div>
 
 <main>
@@ -339,22 +357,59 @@ img{max-width:100%;display:block}
     <div class="footer-grid">
       <div class="footer-brand">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-          <span style="font-family:'Newsreader',serif;font-weight:700;font-size:1.3rem;background:var(--wave);color:#fff;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:6px">LCP</span>
+          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3IWaqRwmbrm4lxEDhjQeB0MLn1K/hf_20260918_232017_1da1ca04-29cf-470e-ac04-1ba08803452c.png" alt="Lincoln County Painters" width="38" height="38" style="border-radius:6px;object-fit:contain">
           <span style="font-family:'Newsreader',serif;font-weight:600;font-size:.9rem;color:#fff;line-height:1.2">Lincoln County<br>Painters</span>
         </div>
         <p>Interior and exterior painting for homes and businesses on the Central Oregon Coast.</p>
         <p style="margin-top:12px;font-size:.82rem;color:rgba(255,255,255,.35)">CCB #XXXXXX</p>
       </div>
-      <div><h4>Services</h4><ul class="footer-links"><li><a href="../../services/interior-painting/">Interior Painting</a></li><li><a href="../../services/exterior-painting/">Exterior Painting</a></li><li><a href="../../services/residential-painting/">Residential</a></li><li><a href="../../services/commercial-painting/">Commercial</a></li><li><a href="../../services/cabinet-painting/">Cabinet Painting</a></li><li><a href="../../services/deck-fence-staining/">Deck &amp; Staining</a></li></ul></div>
-      <div><h4>Service Areas</h4><ul class="footer-links"><li><a href="../newport-or/">Newport</a></li><li><a href="../lincoln-city-or/">Lincoln City</a></li><li><a href="../depoe-bay-or/">Depoe Bay</a></li><li><a href="../waldport-or/">Waldport</a></li><li><a href="../yachats-or/">Yachats</a></li><li><a href="../toledo-or/">Toledo</a></li><li><a href="./">Siletz</a></li></ul></div>
-      <div><h4>Contact</h4>
-        <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--coast)"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><a href="tel:5412707341" style="color:rgba(255,255,255,.7)">(541) 270-7341</a></div>
-        <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--coast)"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><span>info@LincolnCountyPainters.com</span></div>
-        <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--coast)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg><span>Lincoln County, Oregon</span></div>
-        <ul class="footer-links" style="margin-top:16px"><li><a href="../../about/">About</a></li><li><a href="../../contact/">Contact</a></li><li><a href="#estimate">Free Estimate</a></li></ul>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="../../services/interior-painting/">Interior Painting</a></li>
+          <li><a href="../../services/exterior-painting/">Exterior Painting</a></li>
+          <li><a href="../../services/residential-painting/">Residential</a></li>
+          <li><a href="../../services/commercial-painting/">Commercial</a></li>
+          <li><a href="../../services/cabinet-painting/">Cabinet Painting</a></li>
+          <li><a href="../../services/deck-fence-staining/">Deck &amp; Staining</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service Areas</h4>
+        <ul class="footer-links">
+          <li><a href="../../service-areas/newport-or/">Newport</a></li>
+          <li><a href="../../service-areas/lincoln-city-or/">Lincoln City</a></li>
+          <li><a href="../../service-areas/depoe-bay-or/">Depoe Bay</a></li>
+          <li><a href="../../service-areas/waldport-or/">Waldport</a></li>
+          <li><a href="../../service-areas/yachats-or/">Yachats</a></li>
+          <li><a href="../../service-areas/toledo-or/">Toledo</a></li>
+          <li><a href="../../service-areas/siletz-or/">Siletz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../projects/">Projects</a></li>
+          <li><a href="../../cost/">Painting Cost</a></li>
+          <li><a href="../../faq/">FAQ</a></li>
+          <li><a href="../../blog/">Blog</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+        <div class="footer-contact-item" style="margin-top:16px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--coast)"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:5412707341" style="color:rgba(255,255,255,.7)">(541) 270-7341</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--coast)"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>info@LincolnCountyPainters.com</span>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom"><span>&copy; 2026 Lincoln County Painters</span><span>Interior &amp; Exterior Painting &middot; Central Oregon Coast</span></div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Lincoln County Painters</span>
+      <span>Interior &amp; Exterior Painting &middot; Central Oregon Coast</span>
+    </div>
   </div>
 </footer>
 
