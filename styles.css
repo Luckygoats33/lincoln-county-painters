@@ -114,6 +114,7 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
 p { max-width: 68ch; margin-top: 0; }
 a { color: var(--wave); text-decoration: none; transition: color .2s; }
 a:hover { color: var(--coast); }
+a[href^="tel:"] { display: inline-flex; align-items: center; min-height: 44px; }
 img { max-width: 100%; display: block; }
 ul { list-style: none; padding: 0; margin: 0; }
 
