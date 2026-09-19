@@ -79,6 +79,7 @@ body {
   line-height: 1.65;
   margin: 0;
   padding: 0;
+  padding-bottom: 72px;
   letter-spacing: .01em;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -1080,7 +1081,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 /* ---------- MOBILE STICKY CTA ---------- */
 .mobile-cta-bar {
-  display: none;
+  display: flex;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1358,7 +1359,6 @@ ul { list-style: none; padding: 0; margin: 0; }
   .nav-links, .nav-phone { display: none; }
   .nav-toggle { display: flex; }
   .mobile-cta-bar { display: flex; }
-  body { padding-bottom: 72px; }
   .services-grid, .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .expertise-grid, .estimate-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .cost-factors { grid-template-columns: 1fr 1fr; }
